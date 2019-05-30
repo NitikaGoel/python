@@ -2,7 +2,6 @@ from ICCApi import ICCApi
 iccApiInstance = ICCApi()
 all_matches=[]
 api_response = iccApiInstance.get_fixtures(iccApiInstance.get_params("2019-05-30","2019-06-04")).json()
-matches_per_page=api_response["content"]
 total_pages=api_response["pageInfo"]["numPages"]
 print("Total number of pages " +str(total_pages))
 for page in range(total_pages):
